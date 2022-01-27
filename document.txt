@@ -1,0 +1,101 @@
+Tutorial:
+https://www.youtube.com/watch?v=bcme8AzVh6o&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=8
+https://www.mikedane.com/static-site-generators/hugo/content-organization/
+C:\Hugo>hugo new site test
+Congratulations! Your new Hugo site is created in C:\Hugo\test
+Just a few more steps and you're ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the "hugo new theme <THEMENAME>" command.
+2. Perhaps you want to add some content. You can add single files
+   with "hugo new <SECTIONNAME>\<FILENAME>.<FORMAT>".
+3. Start the built-in live server via "hugo server".
+
+https://gohugo.io/documentation/
+https://gohugo.io/documentation/
+releases
+https://github.com/gohugoio/hugo/releases
+
+https://themes.gohugo.io/themes/cupper-hugo-theme/#configuration
+
+https://github.com/zwbetz-gh/cupper-hugo-theme#shortcodes
+
+theme demo
+https://cupper-hugo-theme.netlify.app/post/
+
+windows installation
+https://gohugo.io/getting-started/quick-start/
+diff theme and template
+-------------------------------------------------------------------------------------------
+Front Matters - created by dafault 
+example: 
+---
+date: "2022-01-04T18:27:58+01:00"
+title: "Home"
+---
+
+
+Archetypes  - has dafault.md which is defining the Front Matters in default.md file.
+
+ShortCodes - Predfined templates of HTML
+example: {{< youtube youtubeID >}}
+
+
+Taxonomies - Helps us to create tags and categories - automatically generates by hugo in fetching the pages.
+Examples: It displays all pages which are under same tag / category automatically by hugo.
+
+New Taxanomy
+example: moods: "happy", "sad", "upbeat"
+
+When you add new taxnomy you have to include that in config.toml as 
+[taxanomies]
+	tag = "tags"
+	category = "categories"
+	mood = "moods"
+	
+Usually we dont have to include this taxanomies list in the config.toml file, but as we are creating new taxanomy called mood for that we need to create.
+
+
+Template Basics:
+theme >> layouts >> _default -> list.html and single.html
+	
+Templates: 
+	>> List Page Templates
+	>> Single Page Templates
+	
+HOme Page Templates
+
+Section Templates - to use same template for any pages commonly we can use this to create
+
+Base Templates & Blocks
+
+Variables
+Common Variables - meaning predefined
+{{ .title}}
+Accessing custom variables
+{{ .Params.myVar}}	
+Assigned values
+{{ $myVarName := "astring" }}
+{{ $myVarName }}
+another example
+{{ $myVarName := "astring" }}
+<h1>{{ $myVarName }}</h1>
+More info: https://gohugo.io/variables
+
+Functions
+More info: https://gohugo.io/functions
+
+If Statements
+
+
+Data (acts as mini db )
+files like -> json , toml, yaml
+
+Partial Temples
+
+Shortcode Templates
+very interesting feature
+
+
+	
